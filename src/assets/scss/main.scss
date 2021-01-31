@@ -1,0 +1,147 @@
+@import 'config';
+
+* {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, a, p, input {
+  margin: 0;
+}
+
+#app, .wrapper, .tabs, .tab {
+  height: 100%;
+}
+
+.wrapper {
+  overflow-x: hidden;
+}
+
+.btn {
+  min-width: 150px;
+  padding: 15px 30px;
+  background-color: transparent;
+  border: 2px solid;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &-fill {
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+  &-round {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  &-input {
+    width: 47px;
+    min-width: 47px;
+    height: 47px;
+    padding: 0;
+    border-color: #fff;
+    background-color: #fff;
+
+    &-main {
+      border-color: #fff;
+      background-color: #fff;
+    }
+
+    &-add {
+      border-color: #0A142E;
+      background-color: #0A142E;
+
+      .material-icons {
+        color: #fff;
+        font-size: 32px;
+      }
+    }
+
+    &-delete {
+      .material-icons {
+        color: $incorrect-color;
+      }
+    }
+
+    &-correct {
+      border-color: $success-color;
+      background-color: $success-color;
+    }
+
+    &-incorrect {
+      border-color: $incorrect-color;
+      background-color: $incorrect-color;
+    }
+  }
+}
+
+.input {
+  height: 47px;
+  padding: 15px 20px;
+  font-size: 14px;
+  border: none;
+
+  &-voc {
+    font-weight: 600;
+
+    &-en {
+      background-color: rgba(10, 20, 46, .6);
+      color: #fff;
+
+      &::placeholder {
+        color: #fff;
+      }
+    }
+
+    &-ru {
+      background-color: rgba(10, 20, 46, .05);
+      // opacity: .05;
+
+      &::placeholder {
+        color: $main-color;
+      }
+    }
+  }
+
+  &-search {
+    width: 400px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid $main-color;
+  }
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
